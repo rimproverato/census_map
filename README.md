@@ -1,3 +1,2 @@
-# census_map
-# census_map
+Requirments 
 pip3.8 install folium
