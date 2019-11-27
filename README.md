@@ -10,6 +10,7 @@
     beige <= 1000000
     black <= 10000000
     darkblue <= 100000000
+    red <= the rest
 
 ## Inspiration
 
@@ -23,7 +24,7 @@
 
 ## Challenges
 
-I had a *Naan* object which i had to delete manually 
+I had a *NaNs* object which i had to delete manually 
 
 ### Resources
 
