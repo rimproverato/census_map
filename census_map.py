@@ -9,28 +9,31 @@ lat = list(countries_locations["latitude"])
 lon = list(countries_locations["longitude"])
 pupltn = list(population["column_b"])
 
-# trying to convert to numeric so that i do not have any 'Naans'
+# trying to convert to numeric so that i do not have any 'NaNs'
 lt = pandas.to_numeric(lat)
 lg = pandas.to_numeric(lon)
+ppl = pandas.to_numeric(pupltn, errors='coerce')
+
 
 # change popup color depending on population
 def icon_color (country_population):
-    if countries_locations < 100:
-        return "green"
-    elif countries_locations <= 1000:
+    if country_population < 100:
         return "blue"
-    elif countries_locations <= 10000:
+    elif country_population < 1000:
         return "purple"
-    elif countries_locations <= 100000:
-        return "darkpurple"
-    elif countries_locations <= 1000000:
+    elif country_population < 10000:
         return "orange"
-    elif countries_locations <= 10000000:
-        return "lightred"
-    elif countries_locations <= 100000000:
-        return "cadetblue"
-    else:
+    elif country_population < 100000:
+        return "darkgreen"
+    elif country_population < 1000000:
         return "beige"
+    elif country_population < 10000000:
+        return  "black"
+    elif country_population < 100000000:
+        return "darkblue"
+    else:
+        return "red"
+
 
 # Looping through the countries 
 geo_map = folium.Map(location=[8.7832, 34.5085], zoom_start=3.8)
