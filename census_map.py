@@ -1,3 +1,7 @@
+"""
+    Created by: David Kimolo
+    Email: mwikyakimolo@gmail.com
+"""
 # Importing required libraries
 import folium
 import pandas
@@ -17,19 +21,19 @@ ppl = pandas.to_numeric(pupltn, errors='coerce')
 
 # change popup color depending on population
 def icon_color (country_population):
-    if country_population < 100:
+    if country_population <= 100:
         return "blue"
-    elif country_population < 1000:
+    elif country_population <= 1000:
         return "purple"
-    elif country_population < 10000:
+    elif country_population <= 10000:
         return "orange"
-    elif country_population < 100000:
+    elif country_population <= 100000:
         return "darkgreen"
-    elif country_population < 1000000:
+    elif country_population <= 1000000:
         return "beige"
-    elif country_population < 10000000:
+    elif country_population <= 10000000:
         return  "black"
-    elif country_population < 100000000:
+    elif country_population <= 100000000:
         return "darkblue"
     else:
         return "red"
@@ -41,7 +45,12 @@ background = folium.FeatureGroup(name= "Population map")
 for lt, lg, ppl in zip(lat, lon, pupltn):
     background.add_child(folium.Marker(location= [lt , lg], popup= f"population: {ppl}", icon=folium.Icon(color=icon_color(ppl))))
 
-# Rendering, displaying to the web
+# Rendering 
 geo_map.add_child(background)
+
+# layer control
+geo_map.add_child(folium.LayerControl())
+
+# displaying to the web
 geo_map.save("map.html")
 
