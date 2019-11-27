@@ -1,14 +1,21 @@
-Inspiration
+# About census map
+
+## Inspiration
+
 <https://data.worldbank.org/indicator/sp.pop.totl?view=map>
 
-Requirements
+## Requirements
 
-pip3.8 install folium
-pip3.8 install pandas
+> - pip3.8 install folium
 
-Challenges
-I has a Nan object which i had to delete manually 
+> - pip3.8 install pandas
 
-Resources
-<https://developers.google.com/public-data/docs/canonical/countries_csv>
-<https://data.world/worldbank/total-population-per-country>
+## Challenges
+
+I had a *Naan* object which i had to delete manually 
+
+### Resources
+
+  1. *<https://developers.google.com/public-data/docs/canonical/countries_csv>*
+
+2. *<https://data.world/worldbank/total-population-per-country>*
