@@ -1,5 +1,5 @@
 # About census map
-![Project](https://cardse.net/i/2019/11/27/Hnet-image.gif)
+![Project](https://i.ibb.co/Qc6BXKw/Census-map.png)
 
 This is a little project about *web mapping* using **python** and **folium** that i was inspired to do it after i
 saw a map from the world bank website.
