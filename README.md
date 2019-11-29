@@ -1,5 +1,5 @@
 # About census map
-![Project](https://www.youtube.com/watch?v=D-ES5YPzoDg)
+![Project](https://i.ibb.co/7RLpQzn/Census-map.png)
 
 This is a little project about *web mapping* using **python** and **folium** that i was inspired to do it after i
 saw a map from the world bank website.
